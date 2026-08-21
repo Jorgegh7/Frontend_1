@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "Courier New";
+    margin: 20px;
+    /*Margen general de la pagina*/
+}
+
+/*.header estoy accediendo a la class header dentro de*/
+.header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    /*aire dentro de la caja*/
+    padding: 10px;
+
+    /*Grado de redondeo del box*/
+    border-radius: 10px;
+
+    /*Los elementos se comportan de forma flexible y se alinean en una fila*/
+    display: flex;
+
+    /*los elementos se alinean en el centro*/
+    align-items: center;
+
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+}
+
+.nav {
+    /*El nav ocupa todo el espacio disponible que deja el logo*/
+    flex: 1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #d8b4fe;
+}
+
+
+h1 {
+    font-size: 60px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /*Elimina el punto de la lista*/
+    list-style: none;
+    padding: 0;
+    font-size: 22px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #f4eaff, #ebdbfc);
+    /*Aire interno dentro de la caja*/
+    padding: 50px;
+    border-radius: 15px;
+    /*Margen respecto al header*/
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.button {
+    /*El boton esta configurado como Ancor por lo que funciona como texto y no como caja*/
+    /*Es por este motivo que display: inline-block permite manejar de mejor manera el margen*/
+    display: inline-block;
+    /*Configura el margen superior*/
+    margin-top: 20px;
+    background-color: #6c2bd9;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.hero .button:hover {
+    background-color: #4c219b;
+}
+
+.hero-image {
+    /*% de Utilizacion del Flex*/
+    width: 50%;
+    height: auto;
+}
+
+.categories {
+    background-color: white;
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+    font-size: 50px;
+    justify-content: center;
+}
+
+.category:hover .icon {
+    font-size: 60px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.category:hover {
+    background-color: #f3e8ff;
+}
+
+.category-link {
+    /*Le quita el subrayado del hiperviculo*/
+    text-decoration: none;
+}
+
+.featured-products {
+    background-color: white;
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+.product-list {
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    display: grid;
+}
+
+.product {
+    background: #f9f3ff;
+    border-radius: 15px;
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+}
+
+.footer {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border-radius: 15px;
+    color: white;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.product-page {
+    background-color: white;
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.videojuegos-product-list {
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    display: grid;
+}
+
+.discount-product {
+    background: #ffd139;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.product-button {
+    background-color: #6c2bd9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+
+.product-button:hover {
+    background-color: #5506dd;
+}
+
+.offer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    background-color: #e63946;
+    color: white;
+
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.contacto-img {
+    width: 50%;
+    height: auto;
+}
