@@ -1,0 +1,379 @@
+/* Incluye padding y border dentro de width/height */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "Courier New";
+    /*Margen general de la pagina*/
+    margin: 20px;
+
+}
+
+/*.header estoy accediendo a la class header dentro de*/
+.header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    /*aire dentro de la caja*/
+    padding: 10px;
+
+    /*Grado de redondeo del box*/
+    border-radius: 10px;
+
+    /*Los elementos se comportan de forma flexible y se alinean en una fila*/
+    display: flex;
+
+    /*los elementos se alinean en el centro*/
+    align-items: center;
+
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+}
+
+.nav {
+    /*El nav ocupa todo el espacio disponible que deja el logo*/
+    flex: 1;
+}
+
+nav a {
+    color: white;
+    /*Elimina subrayado*/
+    text-decoration: none;
+
+}
+
+nav a:hover {
+    color: #d8b4fe;
+}
+
+
+h1 {
+    font-size: 60px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /*Elimina el punto de la lista*/
+    list-style: none;
+    padding: 0;
+    font-size: 22px;
+}
+
+.hero {
+    /*Gradiente entre 2 colores aplicado desde la diagonal superior izquierda*/
+    background: linear-gradient(135deg, #f4eaff, #ebdbfc);
+    /*Aire interno dentro de la caja*/
+    padding: 50px;
+    /*Redondeado del box*/
+    border-radius: 15px;
+    /*Margen respecto al header*/
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.button {
+    /*El boton esta configurado como Ancor por lo que funciona como texto y no como caja*/
+    /*Es por este motivo que display: inline-block permite manejar de mejor manera el margen*/
+    display: inline-block;
+    /*Configura el margen superior*/
+    margin-top: 20px;
+    background-color: #6c2bd9;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.hero .button:hover {
+    background-color: #4c219b;
+}
+
+.hero-image {
+    /*% de utilizacion del Flex*/
+    width: 50%;
+    height: auto;
+}
+
+.categories {
+    background-color: white;
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+    font-size: 50px;
+    justify-content: center;
+}
+
+.category:hover .icon {
+    font-size: 60px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.category:hover {
+    background-color: #f3e8ff;
+}
+
+.category-link {
+    /*Le quita el subrayado del hiperviculo*/
+    text-decoration: none;
+}
+
+.featured-products {
+    background-color: white;
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 15px;
+    /*Agrega una sombra alrededor del elemento*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+.product-list {
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    display: grid;
+}
+
+.product {
+    flex-direction: column;
+    background: #f9f3ff;
+    border-radius: 15px;
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+/* nth-child explorado pero no aplicado por decisión estética:
+   bajo volumen de tarjetas no justica su utilizacion
+   Se prioriza :hover como selector avanzado
+
+.product:nth-child(even) {
+    background: #ede4ff;
+}
+    
+*/
+
+.footer {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border-radius: 15px;
+    color: white;
+    padding: 40px;
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+}
+
+.product-page {
+    background-color: white;
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.videojuegos-product-list {
+    margin-top: 30px;
+    /*Cuadricula 2D*/
+    display: grid;
+    /*Grid que se adapta a distintos anchos de pantalla de forma automatica min 300 px*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+
+}
+
+.discount-product {
+    background: #ffd139;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.product-button {
+    margin-top: auto;
+    background-color: #6c2bd9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    /*Modifica la forma del cursor*/
+    cursor: pointer;
+
+}
+
+/*Global dimention para las img de producto*/
+.product img,
+.discount-product img {
+    width: 200px;
+    height: 200px;
+    /*Llena todo el espacio recortando lo que sobra*/
+    object-fit: cover;
+}
+
+.product-button:hover {
+    background-color: #5506dd;
+}
+
+.product:hover {
+    border: 1px solid #8b60d6;
+}
+
+.discount-product:hover {
+    border: 1px solid #c19700
+}
+
+.offer {
+    /*Define una posicion absoluta respecto a su contenedor(declarado como relative)*/
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e63946;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+/*Selector por ID*/
+#contacto-img {
+    width: 50%;
+    height: auto;
+}
+
+img {
+    /*Evita que las imagenes se desborden de su contenedor*/
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 900px) {
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .categories {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .offer {
+        font-size: 0.8em;
+        padding: 4px 7px;
+    }
+
+    .contacto-img {
+        width: 70%;
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    .categories {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .hero-image {
+        width: 100%;
+
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: clamp(24px, 8vw, 60px);
+    }
+
+    .videojuegos-product-list {
+        gap: 25px;
+        grid-template-columns: 1fr;
+    }
+
+}
