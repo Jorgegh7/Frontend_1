@@ -1,0 +1,115 @@
+body {
+    font-family: "Courier New";
+}
+
+.navbar-custom {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+
+.navbar-custom .logo {
+    height: 50px;
+    width: auto;
+}
+
+.btn-primary {
+    background-color: #6c2bd9;
+    border-color: #6c2bd9;
+}
+
+.btn-primary:hover {
+    background-color: #4c219b;
+    border-color: #4c219b;
+}
+
+.hero-custom {
+    background: linear-gradient(135deg, #f4eaff, #ebdbfc);
+}
+
+
+
+.category-link {
+    text-decoration: none;
+    color: #6c2bd9;
+}
+
+.category-link:hover {
+    font-size: 30px;
+    background-color: #f3e8ff;
+}
+
+.carousel-item img {
+    padding-top: 10%;
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.container-pd-title {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #6c2bd9;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #7c3aed;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.footer-custom {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+}
+
+#contacto-img {
+    width: 70%;
+    height: auto;
+}
+
+.accesorios-card {
+    padding: 10%;
+}
+
+.card-oferta {
+    padding: 10%;
+    background-color: #ffd139;
+}
+
+.offer {
+    color: red;
+    padding-bottom: 10%;
+
+}
+
+.consolas-producto {
+    padding: 10%;
+}
+
+.consolas-producto img {
+    width: 100%;
+    height: auto;
+}
+
+.videojuegos-product {
+    padding: 10%;
+}
