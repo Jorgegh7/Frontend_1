@@ -1,0 +1,33 @@
+[
+    {
+        "nombre": "Dragon Ball Z: Kakarot PS5",
+        "precioNormal": 24990,
+        "imagen": "img/productos/dragonball.png"
+    },
+    {
+        "nombre": "Top Spin 2K25 Deluxe Edition PS5",
+        "precioNormal": 24990,
+        "imagen": "img/productos/tenis.png"
+    },
+    {
+        "nombre": "Consola Playstation 5 Slim Digital",
+        "precioNormal": 529990,
+        "imagen": "img/consolas/play5.png"
+    },
+    {
+        "nombre": "Consola Nintendo Switch Modelo OLED (blanca)",
+        "precioNormal": 369990,
+        "imagen": "img/consolas/swith.png"
+    },
+    {
+        "nombre": "JBL Tune 530BT",
+        "precioNormal": 49990,
+        "precioOferta": 29990,
+        "imagen": "img/accesorios/audifonos.png"
+    },
+    {
+        "nombre": "Control Dualsense Blanco - PS5",
+        "precioNormal": 66990,
+        "imagen": "img/accesorios/control-dualsense-blanco-ps5.png"
+    }
+]

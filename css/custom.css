@@ -50,10 +50,16 @@ body {
 
 .container-pd-title {
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .card {
     border: 1px solid #6c2bd9;
+    transition: box-shadow 0.2s ease;
+}
+
+.card img {
+    padding-top: 5%;
 }
 
 .carousel-control-prev-icon,
@@ -112,4 +118,26 @@ body {
 
 .videojuegos-product {
     padding: 10%;
+}
+
+.carrito-flotante {
+    position: absolute;
+    /*Se posiciona respecto al <li> relative*/
+    top: 100%;
+    right: 0;
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    min-width: 250px;
+    z-index: 1000;
+    /*Asegura que aparezca sobre el contenido*/
+}
+
+@media(max-width: 990px) {
+    .carrito-flotante {
+        left: 0;
+    }
+
 }
