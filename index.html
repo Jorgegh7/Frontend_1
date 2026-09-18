@@ -48,6 +48,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#seccion-buscador">Buscar</a>
+                        </li>
                         <li class="nav-item position-relative">
                             <a class="nav-link" href="#" id="carrito-icono">
                                 🛒 <span id="carrito-contador">0</span>
@@ -57,6 +60,8 @@
                                 <h6>Tu Carrito</h6>
                                 <ul id="carrito-lista" class="list-unstyled mb-2"></ul>
                                 <p class="mb-0"><strong>Total: $<span id="carrito-total">0</span></strong></p>
+                                <button id="vaciar-carrito" class="btn btn-sm btn-outline-danger w-100">Vaciar
+                                    Carrito</button>
                             </div>
                         </li>
                     </ul>
@@ -127,7 +132,7 @@
                                 <p class="card-text">Precio normal: $69.990</p>
                                 <p class="card-text">Precio Oferta: $49.990</p>
                                 <button class="btn btn-primary agregar-carrito" data-nombre="Tomodachi Life"
-                                    data-precio="49990">
+                                    data-precio="49990" data-imagen="img/productos/tomodachi_life.png">
                                     Agregar a Carrito
                                 </button>
                             </div>
@@ -142,7 +147,7 @@
                                 <p class="card-text">Precio normal: $69.990</p>
                                 <p class="card-text">Precio Oferta: $49.990</p>
                                 <button class="btn btn-primary agregar-carrito" data-nombre="Metroid Prime 4 Switch"
-                                    data-precio="49990">
+                                    data-precio="49990" data-imagen="img/productos/metroid.png">
                                     Agregar a Carrito
                                 </button>
                             </div>
@@ -158,7 +163,8 @@
                                 <p class="card-text">Precio normal: $49.990</p>
                                 <p class="card-text">Precio Oferta: $29.990</p>
                                 <button class="btn btn-primary agregar-carrito"
-                                    data-nombre="Little Nightmares III Switch" data-precio="29990">
+                                    data-nombre="Little Nightmares III Switch" data-precio="29990"
+                                    data-imagen="img/productos/litte_nightmares_2.png">
                                     Agregar a Carrito
                                 </button>
 
@@ -177,15 +183,41 @@
             </div>
         </div>
 
+
         <!-- CATÁLOGO DINÁMICO (cargado con Fetch API) -->
         <div class="container my-5 p-5 rounded shadow bg-light">
             <div class="container-pd-title">
-                <h2 class="fw-bold">Recién Añadidos</h2>
+                <h2 class="fw-bold" id="titulo-catalogo">Recién Añadidos</h2>
             </div>
+
+            <!-- Botones de filtrado Nuevo / Ofertas-->
+            <div class="btn-group mb-4" role="group">
+                <button type="button" class="btn btn-primary filtro-btn" data-filtro="recientes">Nuevo</button>
+                <button type="button" class="btn btn-outline-primary filtro-btn" data-filtro="ofertas">Ofertas</button>
+            </div>
+
             <div class="row g-4" id="catalogo-lista">
                 <!-- Las cards se generan dinámicamente con JavaScript -->
             </div>
         </div>
+
+
+        <!-- BUSCADOR DE PRODUCTOS -->
+        <div class="container my-5 p-5 rounded shadow bg-light" id="seccion-buscador">
+            <h2 class="fw-bold text-center mb-4">Buscar Productos</h2>
+
+            <form id="form-busqueda" class="d-flex justify-content-center mb-4">
+                <input type="text" id="input-busqueda" class="form-control me-2"
+                    placeholder="Buscar juego por nombre...">
+                <button type="submit" class="btn btn-primary me-2">Buscar</button>
+                <button type="button" id="limpiar-busqueda" class="btn btn-outline-secondary">Limpiar</button>
+            </form>
+
+            <div class="row g-4" id="resultados-busqueda">
+                <!-- Los resultados se generan dinámicamente -->
+            </div>
+        </div>
+
 
     </main>
 
@@ -233,6 +265,68 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL DE BIENVENIDA -->
+    <div class="modal fade" id="modalBienvenida" tabindex="-1" aria-labelledby="modalBienvenidaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBienvenidaLabel">¡Se viene el Cyberday! 🔥</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/recursos/cyberday.png" class="img-fluid" alt="Oferta Cyberday - Hasta 60% OFF">
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL NEWSLETTER -->
+    <div class="modal fade" id="modalNewsletter" tabindex="-1" aria-labelledby="modalNewsletterLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNewsletterLabel">⭐ Gracias por Suscribirte
+                        ⭐</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p id="modalNewsletterTexto"></p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL AGREGAR PRODUCTO AL CARRITO -->
+    <div class="modal fade" id="modalAgregarProductoCarrito" tabindex="-1" aria-labelledby="modalAgregarProductoCarrito"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAgregarProductoCarritoLabel">⭐​ Producto agregado al Carrito ⭐​
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalCarritoImagen" src="" alt="" class="img-fluid mb-3" style="max-height: 180px;">
+                    <h6 id="modalCarritoNombre"></h6>
+                    <p id="modalCarritoPrecio" class="fw-bold"></p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,33 +1,60 @@
 [
     {
+        "nombre": "Tomodachi Life Living The Dream Switch",
+        "precioNormal": 69990,
+        "precioOferta": 49990,
+        "imagen": "img/productos/tomodachi_life.png",
+        "fechaIngreso": "2025-09-10"
+    },
+    {
+        "nombre": "Metroid Prime 4 Switch",
+        "precioNormal": 69990,
+        "precioOferta": 49990,
+        "imagen": "img/productos/metroid.png",
+        "fechaIngreso": "2025-09-05"
+    },
+    {
+        "nombre": "Little Nightmares III Switch",
+        "precioNormal": 39990,
+        "precioOferta": 29990,
+        "imagen": "img/productos/litte_nightmares_2.png",
+        "fechaIngreso": "2025-08-28"
+    },
+    {
         "nombre": "Dragon Ball Z: Kakarot PS5",
         "precioNormal": 24990,
-        "imagen": "img/productos/dragonball.png"
+        "imagen": "img/productos/dragonball.png",
+        "fechaIngreso": "2026-09-15"
     },
     {
         "nombre": "Top Spin 2K25 Deluxe Edition PS5",
         "precioNormal": 24990,
-        "imagen": "img/productos/tenis.png"
+        "imagen": "img/productos/tenis.png",
+        "fechaIngreso": "2026-08-20"
     },
     {
         "nombre": "Consola Playstation 5 Slim Digital",
         "precioNormal": 529990,
-        "imagen": "img/consolas/play5.png"
+        "imagen": "img/consolas/play5.png",
+        "fechaIngreso": "2026-09-12"
     },
     {
         "nombre": "Consola Nintendo Switch Modelo OLED (blanca)",
         "precioNormal": 369990,
-        "imagen": "img/consolas/swith.png"
+        "imagen": "img/consolas/swith.png",
+        "fechaIngreso": "2026-09-05"
     },
     {
         "nombre": "JBL Tune 530BT",
         "precioNormal": 49990,
         "precioOferta": 29990,
-        "imagen": "img/accesorios/audifonos.png"
+        "imagen": "img/accesorios/audifonos.png",
+        "fechaIngreso": "2025-09-12"
     },
     {
         "nombre": "Control Dualsense Blanco - PS5",
         "precioNormal": 66990,
-        "imagen": "img/accesorios/control-dualsense-blanco-ps5.png"
+        "imagen": "img/accesorios/control-dualsense-blanco-ps5.png",
+        "fechaIngreso": "2026-09-12"
     }
 ]

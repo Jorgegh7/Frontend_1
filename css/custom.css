@@ -141,3 +141,15 @@ body {
     }
 
 }
+
+@media (max-width: 576px) {
+    #form-busqueda {
+        flex-direction: column;
+    }
+
+    #form-busqueda input,
+    #form-busqueda button {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
