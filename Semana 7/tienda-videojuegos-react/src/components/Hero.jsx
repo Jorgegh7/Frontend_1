@@ -10,7 +10,7 @@ function Hero() {
                     <BotonLink texto="Ver videojuegos" href="#productos" />
                 </div>
                 <div className="col-lg-6">
-                    <img src="/img/recursos/game-boy.png" alt="Game-Boy image" className="img-fluid" />
+                    <img src={`${import.meta.env.BASE_URL}img/recursos/game-boy.png`} alt="Game-Boy image" className="img-fluid" />
                 </div>
             </div>
         </div>

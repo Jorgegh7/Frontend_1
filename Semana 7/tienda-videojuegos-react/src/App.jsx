@@ -15,18 +15,21 @@ function App() {
   const [carrito, setCarrito] = useState([]);
 
   // Carga el catálogo desde el JSON una sola vez, al montar el componente.
-  useEffect(() => {
-    fetch('/data/productos.json')
-      .then(response => {
+  const [error, setError] = useState(null);
 
-        // Verificación explícita del estado HTTP antes de intentar parsear el JSON,
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/productos.json`)
+      .then(response => {
         if (!response.ok) {
           throw new Error('Error HTTP: ' + response.status);
         }
         return response.json();
       })
       .then(data => setProductos(data))
-      .catch(error => console.error('Error al cargar productos:', error));
+      .catch(error => {
+        console.error('Error al cargar productos:', error);
+        setError('No se pudieron cargar los productos. Intenta más tarde.');
+      });
   }, []);
 
   // Agrega un producto al carrito. Si el producto ya existe, suma la cantidad
@@ -65,7 +68,7 @@ function App() {
       <ModalBienvenida />
       <Header cantidadCarrito={cantidadCarrito} />
       <Hero />
-      <ListaProductos productos={productos} onAgregar={agregarAlCarrito} />
+      <ListaProductos productos={productos} error={error} onAgregar={agregarAlCarrito} />
       <BuscarProducto productos={productos} onAgregar={agregarAlCarrito} />
       <Carrito items={carrito} onEliminar={eliminarDelCarrito} onVaciar={vaciarCarrito} />
       <Footer />

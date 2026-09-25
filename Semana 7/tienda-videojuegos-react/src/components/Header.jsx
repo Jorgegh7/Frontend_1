@@ -3,7 +3,7 @@ function Header({ cantidadCarrito }) {
         <nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div className="container">
                 <a className="navbar-brand" href="#">
-                    <img className="logo" src="/img/logo2.png" alt="Logo CriticalHit Games" />
+                    <img className="logo" src={`${import.meta.env.BASE_URL}img/logo2.png`} alt="Logo CriticalHit Games" />
                     CriticalHit Games
                 </a>
 

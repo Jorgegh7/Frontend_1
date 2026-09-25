@@ -39,8 +39,8 @@ function Footer() {
                     <div className="col-md-3 my-3">
                         <h5>Síguenos</h5>
                         <div className="social-links">
-                            <a href="#"><img src="/img/recursos/instagram.png" alt="Instagram" /></a>
-                            <a href="#"><img src="/img/recursos/whatsapp.png" alt="WhatsApp" /></a>
+                            <a href="#"><img src={`${import.meta.env.BASE_URL}img/recursos/instagram.png`} alt="Instagram" /></a>
+                            <a href="#"><img src={`${import.meta.env.BASE_URL}img/recursos/whatsapp.png`} alt="WhatsApp" /></a>
                         </div>
                     </div>
 

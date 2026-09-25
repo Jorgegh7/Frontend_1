@@ -16,7 +16,7 @@ function ModalBienvenida() {
                         <button type="button" className="btn-close" onClick={() => setVisible(false)}></button>
                     </div>
                     <div className="modal-body text-center">
-                        <img src="/img/recursos/cyberday.png" className="img-fluid" alt="Oferta Cyberday - Hasta 60% OFF" />
+                        <img src={`${import.meta.env.BASE_URL}img/recursos/cyberday.png`} className="img-fluid" alt="Oferta Cyberday - Hasta 60% OFF" />
                     </div>
                     <div className="modal-footer justify-content-center">
                         <button type="button" className="btn btn-primary" onClick={() => setVisible(false)}>Cerrar</button>

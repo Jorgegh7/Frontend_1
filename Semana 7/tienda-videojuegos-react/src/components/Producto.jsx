@@ -11,7 +11,7 @@ function Producto({ producto, onAgregar }) {
     return (
         <div className="card h-100">
             <img
-                src={producto.imagen}
+                src={`${import.meta.env.BASE_URL}${producto.imagen}`}
                 alt={producto.nombre}
                 className="card-img-top"
                 style={{ height: '330px', objectFit: 'cover' }}
