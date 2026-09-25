@@ -1,0 +1,69 @@
+[
+    {
+        "nombre": "Tomodachi Life Living The Dream Switch",
+        "precioNormal": 69990,
+        "precioOferta": 49990,
+        "descripcion": "Simulador de vida en Switch. Crea tu isla, gestiona relaciones y disfruta de historias divertidas junto a tus Mii.",
+        "imagen": "img/productos/tomodachi_life.png",
+        "fechaIngreso": "2025-09-10"
+    },
+    {
+        "nombre": "Metroid Prime 4 Switch",
+        "precioNormal": 69990,
+        "precioOferta": 49990,
+        "descripcion": "Aventura de acción en primera persona. Explora mundos alienígenas con Samus Aran en su nueva entrega.",
+        "imagen": "img/productos/metroid.png",
+        "fechaIngreso": "2025-09-05"
+    },
+    {
+        "nombre": "Little Nightmares III Switch",
+        "precioNormal": 39990,
+        "precioOferta": 29990,
+        "descripcion": "Terror y puzles en cooperativo. Ayuda a Low y Alone a escapar de un mundo lleno de pesadillas.",
+        "imagen": "img/productos/litte_nightmares_2.png",
+        "fechaIngreso": "2025-08-28"
+    },
+    {
+        "nombre": "Dragon Ball Z: Kakarot PS5",
+        "precioNormal": 24990,
+        "descripcion": "Revive la historia de Goku en un mundo abierto. Combate, explora y vive momentos icónicos del anime.",
+        "imagen": "img/productos/dragonball.png",
+        "fechaIngreso": "2026-09-15"
+    },
+    {
+        "nombre": "Top Spin 2K25 Deluxe Edition PS5",
+        "precioNormal": 24990,
+        "descripcion": "Simulador de tenis profesional. Compite contra estrellas del circuito con física realista de partidos.",
+        "imagen": "img/productos/tenis.png",
+        "fechaIngreso": "2026-08-20"
+    },
+    {
+        "nombre": "Consola Playstation 5 Slim Digital",
+        "precioNormal": 529990,
+        "descripcion": "Consola de nueva generación en formato compacto. Juegos en alta velocidad con carga casi instantánea.",
+        "imagen": "img/consolas/play5.png",
+        "fechaIngreso": "2026-09-12"
+    },
+    {
+        "nombre": "Consola Nintendo Switch Modelo OLED (blanca)",
+        "precioNormal": 369990,
+        "descripcion": "Pantalla OLED de mayor calidad y colores vibrantes. Juega en casa o en modo portátil donde quieras.",
+        "imagen": "img/consolas/swith.png",
+        "fechaIngreso": "2026-09-05"
+    },
+    {
+        "nombre": "JBL Tune 530BT",
+        "precioNormal": 49990,
+        "precioOferta": 29990,
+        "descripcion": "Audífonos Bluetooth inalámbricos. Sonido de calidad con excelente autonomía de batería para el día a día.",
+        "imagen": "img/accesorios/audifonos.png",
+        "fechaIngreso": "2025-09-12"
+    },
+    {
+        "nombre": "Control Dualsense Blanco - PS5",
+        "precioNormal": 66990,
+        "descripcion": "Control inalámbrico oficial de PS5. Retroalimentación háptica y gatillos adaptativos para mayor inmersión.",
+        "imagen": "img/accesorios/control-dualsense-blanco-ps5.png",
+        "fechaIngreso": "2026-09-12"
+    }
+]
