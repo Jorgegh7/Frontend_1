@@ -1,0 +1,56 @@
+import BotonAccion from './BotonAccion';
+
+function Carrito({ items, total, onEliminar, onVaciar, onFinalizar }) {
+
+    return (
+        <div id="carrito" className="container my-5 p-5 rounded shadow bg-light">
+            <h2 className="fw-bold text-center mb-4">Tu Carrito</h2>
+
+            {items.length === 0 ? (
+                <p className="text-center text-muted">Tu carrito está vacío.</p>
+            ) : (
+                <ul className="list-unstyled">
+                    {items.map((item, index) => {
+                        const precio = item.producto.precioOferta || item.producto.precioNormal;
+                        const subtotal = precio * item.cantidad;
+                        return (
+                            <li key={index} className="d-flex justify-content-between align-items-center border-bottom py-3">
+                                <div className="d-flex align-items-center">
+                                    {/* Miniatura del producto */}
+                                    <img
+                                        src={`${import.meta.env.BASE_URL}${item.producto.imagen}`}
+                                        alt={item.producto.nombre}
+                                        className="rounded me-3"
+                                        style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                                    />
+                                    <div>
+                                        <strong>{item.producto.nombre}</strong><br />
+                                        <small>Precio unitario: ${precio} — Cantidad: {item.cantidad} — Subtotal: ${subtotal}</small>
+                                    </div>
+                                </div>
+                                <BotonAccion
+                                    texto="Eliminar"
+                                    onClick={() => onEliminar(item.producto.nombre)}
+                                    className="btn btn-danger btn-sm ms-3 flex-shrink-0"
+                                />
+                            </li>
+                        );
+                    })}
+                </ul>
+            )}
+
+            <p className="text-end fs-4 mt-4"><strong>Total: ${total}</strong></p>
+
+            {/* Los botones solo aparecen si hay productos en el carrito */}
+            {items.length > 0 && (
+                <div className="text-center">
+                    <BotonAccion texto="Finalizar compra" onClick={onFinalizar} className="btn btn-primary me-2" />
+                    <BotonAccion texto="Vaciar Carrito" onClick={onVaciar} className="btn btn-outline-danger" />
+                </div>
+            )}
+
+        </div>
+    );
+}
+
+export default Carrito;
