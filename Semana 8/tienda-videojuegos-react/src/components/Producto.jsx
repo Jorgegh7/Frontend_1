@@ -24,7 +24,7 @@ function Producto({ producto, onAgregar, carrito }) {
                 />
             </div>
             <div className="card-body text-center p-3">
-                <h6 className="card-title fw-bold mb-1" style={{ fontSize: '14px' }}>{producto.nombre}</h6>
+                <strong><h6 className="card-title fw-bold mb-1" style={{ fontSize: '14px' }}>{producto.nombre}</h6></strong>
                 <p className="card-text text-muted mb-2" style={{ fontSize: '12px' }}>{producto.descripcion}</p>
 
                 {producto.precioOferta ? (

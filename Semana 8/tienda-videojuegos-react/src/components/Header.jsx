@@ -39,7 +39,10 @@ function Header({ cantidadCarrito }) {
                         <a className="nav-link me-lg-3" href="#productos" onClick={cerrarMenu}>Productos</a>
                         <a className="nav-link me-lg-3" href="#buscar" onClick={cerrarMenu}>Buscar</a>
                         <a className="nav-link me-lg-3" href="#carrito" onClick={cerrarMenu}>Carrito</a>
-                        <span className="nav-link">🛒 {cantidadCarrito}</span>
+                        {/* El ícono con el contador ahora es un link que lleva a la sección del carrito */}
+                        <a className="nav-link" href="#carrito" onClick={cerrarMenu} aria-label="Ir al carrito">
+                            🛒 {cantidadCarrito}
+                        </a>
                     </div>
                 </div>
             </div>

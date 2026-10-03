@@ -1,6 +1,7 @@
 import BotonAccion from './BotonAccion';
 
 function Carrito({ items, onEliminar, onVaciar }) {
+    // Total general: suma (precio × cantidad) de cada línea, usando el precio de oferta si existe
     const total = items.reduce((acumulado, item) => {
         const precio = item.producto.precioOferta || item.producto.precioNormal;
         return acumulado + (precio * item.cantidad);
@@ -19,9 +20,18 @@ function Carrito({ items, onEliminar, onVaciar }) {
                         const subtotal = precio * item.cantidad;
                         return (
                             <li key={index} className="d-flex justify-content-between align-items-center border-bottom py-3">
-                                <div>
-                                    <strong>{item.producto.nombre}</strong><br />
-                                    <small>Precio unitario: ${precio} — Cantidad: {item.cantidad} — Subtotal: ${subtotal}</small>
+                                <div className="d-flex align-items-center">
+                                    {/* Miniatura del producto */}
+                                    <img
+                                        src={`${import.meta.env.BASE_URL}${item.producto.imagen}`}
+                                        alt={item.producto.nombre}
+                                        className="rounded me-3"
+                                        style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                                    />
+                                    <div>
+                                        <strong>{item.producto.nombre}</strong><br />
+                                        <small>Precio unitario: ${precio} — Cantidad: {item.cantidad} — Subtotal: ${subtotal}</small>
+                                    </div>
                                 </div>
                                 <BotonAccion
                                     texto="Eliminar"
