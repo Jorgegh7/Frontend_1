@@ -119,12 +119,6 @@ tienda-videojuegos-react/
 - **JSON en `public/data/`**: se deja ahí, y no en `src/`, porque necesita ser accesible por URL para el `fetch`.
 - **Datos de los videojuegos**: se mantienen en un archivo JSON (nombre, categoría, precio, descripción e imagen) y se cargan dinámicamente, en lugar de estar escritos dentro del código.
 
-## Mejoras futuras
-
-- Persistencia del carrito entre recargas (`localStorage`)
-- Un panel para agregar y eliminar productos del catálogo
-- Pasarela de pago real en lugar de la compra simulada
-- Enrutamiento entre vistas con React Router
 
 ## Autor
 
